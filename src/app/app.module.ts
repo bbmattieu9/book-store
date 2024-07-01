@@ -5,6 +5,7 @@ import { BookReducer } from './features/book/store/book.reducer';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppState } from './app.state';
+import { BookModule } from './features/book/book.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { AppState } from './app.state';
   ],
   imports: [
     BrowserModule,
+
     StoreModule.forRoot<AppState>({book: BookReducer}),
     AppRoutingModule
   ],
